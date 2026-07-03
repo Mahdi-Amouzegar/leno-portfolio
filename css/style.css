@@ -834,6 +834,7 @@ body {
   padding: 4.2rem;
   background-color: rgba(255, 255, 255, 0.1);
   height: 100%;
+  max-width: 35rem;
   border-radius: 24px;
 }
 
@@ -926,6 +927,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  padding: 1rem 2rem;
 }
 
 .details-features__item {
@@ -965,6 +967,199 @@ body {
   font-size: 1.6rem;
 }
 
+/* ////////////////////////////////// */
+/* PORTFOLIO SECTION */
+/* ////////////////////////////////// */
+/* Badge Container */
+.portfolio-badge {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Tahoma,
+    sans-serif;
+  direction: rtl;
+}
+
+/* Badge Main Box */
+.portfolio-badge__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.9rem 1.4rem;
+  background: rgba(99, 102, 241, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.5);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  max-width: 140px;
+  white-space: nowrap;
+}
+
+/* Hover State - Expanded */
+.portfolio-badge__box:hover {
+  max-width: 380px;
+  background: rgba(79, 70, 229, 0.98);
+  box-shadow: 0 15px 40px -5px rgba(79, 70, 229, 0.7);
+  transform: translateY(-4px);
+}
+
+/* Icon (Always Visible) */
+.portfolio-badge__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.portfolio-badge__box:hover .portfolio-badge__icon {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.portfolio-badge__icon svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* Main Label (Always Visible) */
+.portfolio-badge__label {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* Separator (Hidden by default) */
+.portfolio-badge__separator {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  transition:
+    opacity 0.3s ease 0.2s,
+    transform 0.3s ease 0.2s;
+}
+
+.portfolio-badge__box:hover .portfolio-badge__separator {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* Expanded Content (Hidden by default) */
+.portfolio-badge__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  opacity: 0;
+  transform: translateX(10px);
+  transition:
+    opacity 0.4s ease 0.15s,
+    transform 0.4s ease 0.15s;
+  flex-shrink: 0;
+}
+
+.portfolio-badge__box:hover .portfolio-badge__details {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Designer Name */
+.portfolio-badge__name {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* LinkedIn Link */
+.portfolio-badge__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.portfolio-badge__link:hover {
+  color: white;
+}
+
+.portfolio-badge__link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Pulse Animation (Idle State) */
+@keyframes badge-pulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow:
+      0 10px 30px -5px rgba(99, 102, 241, 0.8),
+      0 0 0 8px rgba(99, 102, 241, 0);
+  }
+}
+
+.portfolio-badge__box {
+  animation: badge-pulse 3s ease-in-out infinite;
+}
+
+.portfolio-badge__box:hover {
+  animation: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .portfolio-badge {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .portfolio-badge__box {
+    padding: 0.8rem 1.2rem;
+    max-width: 120px;
+  }
+
+  .portfolio-badge__box:hover {
+    max-width: 320px;
+  }
+
+  .portfolio-badge__label {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-badge__name {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-badge__link {
+    font-size: 1rem;
+  }
+}
 /* ////////////////////////////////// */
 /* MEDIA SECTION */
 /* ////////////////////////////////// */
@@ -1030,6 +1225,7 @@ body {
 
   .pricing__plans {
     grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
   }
 }
 

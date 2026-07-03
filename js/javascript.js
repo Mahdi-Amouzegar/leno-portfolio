@@ -20,3 +20,20 @@ function toggleHeaderBackground() {
 window.addEventListener("scroll", toggleHeaderBackground);
 
 toggleHeaderBackground();
+
+// Optional: Add click behavior to open LinkedIn when clicking the badge itself
+(function () {
+  const badgeBox = document.querySelector(".portfolio-badge__box");
+  const linkedinLink = document.querySelector(".portfolio-badge__link");
+
+  // Click on badge opens LinkedIn (only if not already clicking the link)
+  badgeBox.addEventListener("click", function (e) {
+    if (e.target !== linkedinLink && !linkedinLink.contains(e.target)) {
+      window.open(
+        "https://www.linkedin.com/in/mahdi-amouzegar/",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    }
+  });
+})();

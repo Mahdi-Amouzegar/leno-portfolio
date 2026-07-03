@@ -1,21 +1,554 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa-IR" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>سایت لنو &VerticalBar; سایت خبری تکنولوژی</title>
+    <title>سایت لنو &VerticalBar; اپ سلامت و تکنولوژی</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <!-- Goolge Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h1>Project</h1>
+    <header class="header">
+      <nav class="header__nav">
+        <a href="#top" class="header__logo">
+          <img class="header__img" src="./images/logo.svg" alt="تصویر لوگو" />
+        </a>
+        <ul class="header__nav-menu">
+          <li class="header__nav-item">
+            <a href="#top" class="header__nav-link">خانه</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#features-section" class="header__nav-link">امکانات</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#preview-section" class="header__nav-link">پیش‌نمایش</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#details-section" class="header__nav-link">جزئیات</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#download-section" class="header__nav-link">دانلود</a>
+          </li>
+          <li class="header__nav-item">
+            <a
+              href="https://twitter.com"
+              class="header__nav-link--social"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-x-twitter" aria-label="Open twitter page"></i>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a
+              href="https://www.facebook.com"
+              class="header__nav-link--social"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f" aria-label="Open facebook page"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="header__toggle_btn">
+          <span class="header__toggle_span"></span>
+          <span class="header__toggle_span"></span>
+          <span class="header__toggle_span"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <main class="main" id="top">
+      <section class="hero-section" id="hero-section">
+        <div class="hero__container container">
+          <div class="hero__text-content">
+            <h1 class="hero__title">
+              دستیارِ
+              <span>بهره‌وری</span>
+              برای شما
+            </h1>
+            <p class="hero__text-body">
+              با اپلیکیشن جامع «لِنو» (Leno)، بهره‌وری خود را افزایش دهید و
+              سلامتی‌تان را بهبود ببخشید؛ اپلیکیشنی ویژه توسعه‌دهندگان و خالقان.
+            </p>
+            <div class="hero__cta-buttons">
+              <a href="./details.html" class="button cta-button">
+                <i class="fa-brands fa-apple"></i> <span>برای اپل</span>
+              </a>
+              <a href="./details.html" class="button cta-button">
+                <i class="fa-brands fa-android"></i> <span>برای اندروید</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <img
+              src="./images/header-smartphones.png"
+              alt=""
+              class="hero__img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="testimonials-section" id="testimonials-section">
+        <div class="testimonials__container container">
+          <article class="testimonials__card">
+            <blockquote class="testimonials__quote">
+              <p>
+                «Leno واقعاً نحوه مدیریت زمان و سلامتی‌ام را متحول کرده. به شدت
+                پیشنهاد می‌کنم!»
+              </p>
+            </blockquote>
+            <figure class="testimonials__user">
+              <div class="testimonials__image">
+                <img
+                  src="./images/testimonial-1.jpg"
+                  alt="نظر کاربر اول"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="testimonials__user-name">
+                سامانتا سامسون
+              </figcaption>
+            </figure>
+          </article>
+          <article class="testimonials__card">
+            <blockquote class="testimonials__quote">
+              <p>
+                «به‌عنوان یک توسعه‌دهنده، هر روز برای حفظ تمرکز و انرژی‌ام به
+                Leno متکی هستم. این اپلیکیشن یک تحول واقعی است!»
+              </p>
+            </blockquote>
+            <figure class="testimonials__user">
+              <div class="testimonials__image">
+                <img
+                  src="./images/testimonial-2.jpg"
+                  alt="نظر کاربر دوم"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="testimonials__user-name">
+                مایک جانسون
+              </figcaption>
+            </figure>
+          </article>
+          <article class="testimonials__card">
+            <blockquote class="testimonials__quote">
+              <p>
+                «با Leno، توانسته‌ام اهدافم را سریع‌تر و سالم‌تر از همیشه محقق
+                کنم. این اپلیکیشن واقعاً ضروری است!»
+              </p>
+            </blockquote>
+            <figure class="testimonials__user">
+              <div class="testimonials__image">
+                <img
+                  src="./images/testimonial-3.jpg"
+                  alt="نظر کاربر سوم"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="testimonials__user-name">
+                لینی اسمیت
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
 
-    <script src="./js/javascript.com"></script>
+      <section class="features-section" id="features-section">
+        <div class="features__container container">
+          <div class="features__header">
+            <h2 class="features__header-title">ویژگی‌های کلیدی</h2>
+            <p class="features__header-description">
+              ویژگی‌های قدرتمندی را کشف کنید که Leno را به همراه بی‌نظیر
+              بهره‌وری و سلامت تبدیل می‌کند:
+            </p>
+          </div>
+          <div class="features__grid">
+            <div class="features__grid-column features__grid-column-right">
+              <!-- Grid Item no 1 -->
+              <div class="features__grid-item">
+                <div class="features__grid-item-text">
+                  <h3 class="features__grid-item-title">داده‌های لحظه‌ای</h3>
+                  <div class="features__grid-item-body">
+                    <p>
+                      دسترسی فوری به داده‌های لحظه‌ای، تا همیشه از آخرین اطلاعات
+                      به‌روز باشید.
+                    </p>
+                  </div>
+                </div>
+                <div class="features__grid-item-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+              </div>
+              <!-- Grid Item no 2 -->
+              <div class="features__grid-item">
+                <div class="features__grid-item-text">
+                  <h3 class="features__grid-item-title">ویرایشگر بصری</h3>
+                  <div class="features__grid-item-body">
+                    <p>
+                      فضای کاری خود را با ویرایشگر بصری و کاربرپسند ما شخصی‌سازی
+                      کنید.
+                    </p>
+                  </div>
+                </div>
+                <div class="features__grid-item-icon">
+                  <i class="fa-solid fa-paintbrush"></i>
+                </div>
+              </div>
+              <!-- Grid Item no 3 -->
+              <div class="features__grid-item">
+                <div class="features__grid-item-text">
+                  <h3 class="features__grid-item-title">گزینه‌های پیشرفته</h3>
+                  <div class="features__grid-item-body">
+                    <p>
+                      دسترسی به طیف گسترده‌ای از تنظیمات دقیق برای شخصی‌سازی
+                      Leno بر اساس نیازهای منحصربه‌فرد شما.
+                    </p>
+                  </div>
+                </div>
+                <div class="features__grid-item-icon">
+                  <i class="fa-solid fa-sliders"></i>
+                </div>
+              </div>
+            </div>
+            <div class="features__grid-column features__grid-column-center">
+              <div class="features__image">
+                <img
+                  src="./images/features-smartphone-1.png"
+                  alt="تصویر مربوط به ویژگی‌های اپ"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <div class="features__grid-column features__grid-column-left">
+              <!-- Grid Item no 1 -->
+              <div class="features__grid-item">
+                <div class="features__grid-item-text">
+                  <h3 class="features__grid-item-title">یکپارچگی با تقویم</h3>
+                  <div class="features__grid-item-body">
+                    <p>
+                      تقویم خود را به‌طور یکپارچه متصل کنید تا سازمان‌یافته و در
+                      مسیر درست باقی بمانید.
+                    </p>
+                  </div>
+                </div>
+                <div class="features__grid-item-icon">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+              </div>
+              <!-- Grid Item no 2 -->
+              <div class="features__grid-item">
+                <div class="features__grid-item-text">
+                  <h3 class="features__grid-item-title">مطالعه آسان</h3>
+                  <div class="features__grid-item-body">
+                    <p>
+                      از خواندن بدون حواس‌پرتی با رابط کاربری تمیز و شهودی Leno
+                      لذت ببرید.
+                    </p>
+                  </div>
+                </div>
+                <div class="features__grid-item-icon">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+              </div>
+              <!-- Grid Item no 3 -->
+              <div class="features__grid-item">
+                <div class="features__grid-item-text">
+                  <h3 class="features__grid-item-title">زیرساخت قوی</h3>
+                  <div class="features__grid-item-body">
+                    <p>
+                      Leno بر پایه بازخورد کاربران و فناوری‌های پیشرفته ساخته
+                      شده است.
+                    </p>
+                  </div>
+                </div>
+                <div class="features__grid-item-icon">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="preview-section" id="preview-section">
+        <div class="preview__container container">
+          <div class="preview__content">
+            <header class="preview__header">
+              <h3 class="preview__title">پیش‌نمایش</h3>
+              <p class="preview__header-text">
+                نگاهی بیندازید به رابط کاربری شیک و کاربرپسند Leno:
+              </p>
+            </header>
+            <figure class="preview__video-box">
+              <div class="preview__image">
+                <img src="./images/video-frame.jpg" alt="" />
+              </div>
+              <button class="preview__play-btn-back">
+                <span class="preview__play-btn-key"></span>
+              </button>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <dialog class="video-modal" id="video-modal">
+        <div class="video-modal__content">
+          <h3 class="video-modal__title">نمایش ویدئو</h3>
+          <iframe
+            src=""
+            frameborder="0"
+            class="video-modal__video"
+            allowfullscreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+          ></iframe>
+        </div>
+        <button class="video-modal__close">&times;</button>
+      </dialog>
+      <section class="details-section" id="details-section">
+        <div class="detailes__container container">
+          <div class="details__items">
+            <article class="details__item">
+              <figure class="detailes__item-image">
+                <img src="./images/details-1.png" alt="تصویر محصول" />
+              </figure>
+              <div class="details__item-content">
+                <h3 class="detailes__item-title">
+                  از همین امروز برنامه‌ریزی برای اهداف بلندمدت خود را آغاز کنید.
+                </h3>
+                <p class="detailes__item-description">
+                  با استفاده از ابزارهای مناسب می‌توانید اهداف خود را مدیریت
+                  کنید، روند پیشرفت را زیر نظر بگیرید و با برنامه‌ریزی دقیق،
+                  مسیر رسیدن به موفقیت را هموارتر کنید.
+                </p>
+                <a href="details.html" class="detailes__btn button cta-button"
+                  >اطلاعات بیشتر</a
+                >
+              </div>
+            </article>
+            <article class="details__item">
+              <figure class="detailes__item-image">
+                <img src="./images/details-2.png" alt="تصویر محصول" />
+              </figure>
+              <div class="details__item-content">
+                <h3 class="detailes__item-title">
+                  تقویم هوشمند به شما کمک می‌کند کارهای خود را زمان‌بندی کنید.
+                </h3>
+                <p class="detailes__item-description">
+                  با زمان‌بندی دقیق فعالیت‌ها، یادآوری رویدادهای مهم و مدیریت
+                  بهتر برنامه‌های روزانه، می‌توانید بهره‌وری خود را افزایش دهید
+                  و هیچ کاری را از دست ندهید.
+                </p>
+                <a href="details.html" class="detailes__btn button cta-button"
+                  >اطلاعات بیشتر</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="statistics-section" id="statistics-section">
+        <ul class="statistics__list">
+          <li class="statistics__item">
+            <i class="statistics__icon fa-solid fa-user-group"></i>
+            <strong class="statistics__number"> ۵۵٬۰۰۰ </strong>
+            <span class="statistics__caption"> کاربران فعال</span>
+          </li>
+          <li class="statistics__item">
+            <i class="statistics__icon fa-solid fa-circle-check"></i>
+            <strong class="statistics__number"> ۵۸۵ </strong>
+            <span class="statistics__caption"> وظایف مدیریت‌شده</span>
+          </li>
+          <li class="statistics__item">
+            <i class="statistics__icon fa-solid fa-star"></i>
+            <strong class="statistics__number"> ۷۸۸ </strong>
+            <span class="statistics__caption"> امتیاز کاربران</span>
+          </li>
+          <li class="statistics__item">
+            <i class="statistics__icon fa-solid fa-book-open"></i>
+            <strong class="statistics__number"> ۱۰۰ </strong>
+            <span class="statistics__caption"> مطالعات موردی</span>
+          </li>
+          <li class="statistics__item">
+            <i class="statistics__icon fa-solid fa-newspaper"></i>
+            <strong class="statistics__number"> ۱۱۰ </strong>
+            <span class="statistics__caption"> پوشش رسانه‌ای</span>
+          </li>
+        </ul>
+      </section>
+      <section class="screenshots-section" id="screenshots-section">
+        <div class="screenshots__container container">
+          <div class="screenshots__content">
+            <header class="screenshots__header">
+              <h2 class="screenshots__title">تصاویر پیش‌نمایش</h2>
+            </header>
+            <ul class="screenshots__list">
+              <li class="screenshots__item">
+                <a>
+                  <img src="./images/screenshot-1.png" alt="پیش نمایش اپ" />
+                </a>
+              </li>
+              <li class="screenshots__item">
+                <a>
+                  <img src="./images/screenshot-2.png" alt="پیش نمایش اپ" />
+                </a>
+              </li>
+              <li class="screenshots__item">
+                <a>
+                  <img src="./images/screenshot-3.png" alt="پیش نمایش اپ" />
+                </a>
+              </li>
+              <li class="screenshots__item">
+                <a>
+                  <img src="./images/screenshot-4.png" alt="پیش نمایش اپ" />
+                </a>
+              </li>
+              <li class="screenshots__item">
+                <a>
+                  <img src="./images/screenshot-5.png" alt="پیش نمایش اپ" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="download-section" id="download-section">
+        <div class="download__container container">
+          <div class="download__layout">
+            <figure class="download__image">
+              <img src="./images/download.png" alt="تصویر دانلود" />
+            </figure>
+            <div class="download__content">
+              <p class="download__text">
+                همین امروز اپلیکیشن را دانلود کنید و مدیریت کارهای روزانه را
+                سریع‌تر، ساده‌تر و هوشمندانه‌تر تجربه کنید.
+              </p>
+              <div class="download__buttons">
+                <a href="details.html" class="download__btn button cta-button">
+                  <i class="fa-brands fa-apple"></i> <span>نسخه اپل</span>
+                </a>
+                <a href="details.html" class="download__btn button cta-button">
+                  <i class="fa-brands fab fa-android"></i>
+                  <span>نسخه اندروید</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__container container">
+        <div class="footer__layout">
+          <section class="footer__about">
+            <h3 class="footer__title">درباره Leno</h3>
+            <p class="footer__about-text">
+              Leno به شما کمک می‌کند با برنامه‌ریزی بهتر، پیگیری اهداف و مدیریت
+              زمان، بهره‌وری خود را افزایش دهید و تعادل مناسبی میان کار و زندگی
+              برقرار کنید.
+            </p>
+          </section>
+          <nav class="footer__nav">
+            <h3 class="footer__title">دسترسی سریع</h3>
+            <ul class="footer__links">
+              <li class="footer__nav-item">
+                <a href="#top" class="footer__nav-link">صفحه اصلی</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#testimonials-section" class="footer__nav-link"
+                  >دیدگاه کاربران</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="#features-section" class="footer__nav-link"
+                  >ویژگی‌ها</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="#preview-section" class="footer__nav-link"
+                  >پیش‌نمایش</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="#details-section" class="footer__nav-link">جزئیات</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#download-section" class="footer__nav-link">دانلود</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer__social">
+            <h3 class="footer__title">ما را دنبال کنید</h3>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a
+                  class="footer__social-link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="footer__social-icon fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a
+                  class="footer__social-link"
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                >
+                  <i class="footer__social-icon fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a
+                  class="footer__social-link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="footer__social-icon fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a
+                  class="footer__social-link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i class="footer__social-icon fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/javascript.js"></script>
+    <script src="./js/video-modal.js"></script>
   </body>
 </html>
